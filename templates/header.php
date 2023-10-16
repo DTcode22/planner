@@ -14,7 +14,6 @@
 
 <header>
     <h1>Project Managment App</h1>
-    <?php include("templates/navbar.php");?>
 </header>
 
 <!-- Opening main content container -->

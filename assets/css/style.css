@@ -1,13 +1,30 @@
 body {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   margin: 0;
   padding: 0;
   font-family: "Arial", sans-serif;
-  background-color: #f4f4f4;
+  background: linear-gradient(#8cc4eb, #a6adf8);
   color: #333;
 }
 header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1440px;
   background-color: #007bff;
   color: #fff;
   padding: 10px;
   text-align: center;
+}
+a {
+  text-decoration: none;
+}
+button {
+  cursor: pointer;
 }

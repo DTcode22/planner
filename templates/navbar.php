@@ -11,7 +11,9 @@
 
 <!-- Additional styling for the navigation -->
 <style>
+
     nav {
+        width: 50%;
         background-color: #333;
         padding: 10px;
     }
@@ -29,6 +31,5 @@
 
     a {
         color: white;
-        text-decoration: none;
     }
 </style>
