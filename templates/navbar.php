@@ -1,35 +1,28 @@
-<!-- templates/navbar.php -->
+<div class="navbar-container">
+    <div class="slikalogo">123123123</div>
 
-<nav>
-    <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
-        <!-- Add more navigation items as needed -->
-    </ul>
-</nav>
-
-<!-- Additional styling for the navigation -->
+    <div class="links">
+        <div class="link">link1</div>
+        <div class="link">link2</div>
+        <div class="link">link3</div>
+    </div>
+</div>
 <style>
-
-    nav {
-        width: 50%;
+    .navbar-container {
+        width: 100%;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
         background-color: #333;
-        padding: 10px;
+        color: whitesmoke;
     }
 
-    ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-    }
 
-    li {
-        display: inline;
-        margin-right: 10px;
-    }
 
-    a {
-        color: white;
+    .links {
+        display: flex;
+        width: 300px;
+        justify-content: space-around;
     }
 </style>

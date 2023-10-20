@@ -7,24 +7,25 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Arial", sans-serif;
-  background: linear-gradient(#8cc4eb, #a6adf8);
+  background-color: #f2f2f2;
   color: #333;
 }
-header {
+
+.app-container {
+  width: 100%;
+  max-width: 1440px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: 100%;
-  max-width: 1440px;
-  background-color: #007bff;
-  color: #fff;
-  padding: 10px;
-  text-align: center;
+  background-color: #f2f2f2;
 }
+
 a {
   text-decoration: none;
+  cursor: pointer;
 }
+
 button {
   cursor: pointer;
 }

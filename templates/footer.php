@@ -1,14 +1,24 @@
-</main>
-<!-- Closing main content container -->
+<div class="footer-container">
+    <div class="space1">space1</div>
+    <div class="space2">space2</div>
+</div>
+<style>
+    .footer-container {
+        width: 100%;
+        height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: blanchedalmond;
+    }
 
-<!-- Your footer content goes here -->
+    .space1 {
+        height: 40%;
+        width: 40%;
+    }
 
-<footer>
-    <p>&copy; <?php echo date("Y"); ?> Project Managment App. All rights reserved.</p>
-    <!-- Include any additional footer content or scripts -->
-</footer>
-
-<!-- Include any additional JavaScript files -->
-<script src="assets/js/script.js"></script>
-</body>
-</html>
+    .space2 {
+        height: 40%;
+        width: 40%;
+    }
+</style>
