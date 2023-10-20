@@ -1,11 +1,12 @@
-<div class="footer-container">
+<div class="footer-content">
     <div class="space1">space1</div>
     <div class="space2">space2</div>
 </div>
 <style>
-    .footer-container {
+    .footer-content {
         width: 100%;
-        height: 300px;
+        height: 100%;
+        max-width: 1440px;
         display: flex;
         align-items: center;
         justify-content: center;

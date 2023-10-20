@@ -9,14 +9,23 @@
 </head>
 
 <body>
-    <div class="app-container">
-        <?php include "templates/navbar.php" ?>
-        <div class="links">
-            <a href="./">homepage</a>
-            <a href="pages/login.php">login ref</a>
-            <a href="pages/register.php">register ref</a>
+    <!-- full-vw-container -->
+    <div class="full-vw">
+
+        <!-- navbar-container -->
+        <div class="navbar-container">
+            <?php include "templates/navbar.php" ?>
         </div>
-        <?php include "templates/footer.php" ?>
+
+        <div class="login-container">
+            <div class="login-content">
+                loginnnnnnnnnnnnn
+            </div>
+
+        </div>
+        <div class="footer-container">
+            <?php include "templates/footer.php" ?>
+        </div>
     </div>
 
     <script src="assets/js/script.js"></script>

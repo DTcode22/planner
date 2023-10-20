@@ -1,4 +1,4 @@
-<div class="navbar-container">
+<div class="navbar-content">
     <div class="slikalogo">123123123</div>
 
     <div class="links">
@@ -8,17 +8,16 @@
     </div>
 </div>
 <style>
-    .navbar-container {
+    .navbar-content {
         width: 100%;
-        height: 60px;
+        height: 100%;
+        max-width: 1440px;
         display: flex;
         align-items: center;
         justify-content: space-between;
         background-color: #333;
         color: whitesmoke;
     }
-
-
 
     .links {
         display: flex;

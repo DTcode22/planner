@@ -6,39 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Register</title>
 </head>
-<style>
-  body {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    margin: 0;
-    padding: 0;
-    font-family: "Arial", sans-serif;
-    background-color: #f2f2f2;
-    color: #333;
-  }
 
-  .app-container {
-    width: 100%;
-    max-width: 1440px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    background-color: #f2f2f2;
-  }
-
-  a {
-    text-decoration: none;
-    cursor: pointer;
-  }
-
-  button {
-    cursor: pointer;
-  }
-</style>
 
 <body>
 
