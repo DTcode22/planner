@@ -1,13 +1,13 @@
 <?php
 
-require "database.php" 
+require "database.php";
 
 $username = $_POST['username'];
 $password = $_POST['password'];
 
 $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
-$conn = gtDBConnection()
+$conn = getDBConnection();
 
 $sql = "INSERT INTO users (username, password) VALUES ('$username', '$hashed_password')";
 

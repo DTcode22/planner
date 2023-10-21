@@ -1,11 +1,11 @@
 <?php
 
-require "database.php" 
+require "database.php";
 
 $username = $_POST['username'];
 $password = $_POST['password'];
 
-$conn = getDBConnection()
+$conn = getDBConnection();
 
 $query = "SELECT * FROM users WHERE username = '$username'";
 $result = $conn->query($query);
