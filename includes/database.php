@@ -1,7 +1,8 @@
 <?php
-require "database_info.php"
+require "database_info.php";
 
-function getDBConnection() {
+function getDBConnection()
+{
     global $db_host, $db_username, $db_password, $db_name;
 
     $conn = new mysqli($db_host, $db_username, $db_password, $db_name);
