@@ -13,9 +13,19 @@ a {
 button {
   cursor: pointer;
 }
+h3 {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
 .full-vw {
   width: 100vw;
-  height: 100vh;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -34,16 +44,93 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 500px;
+  height: 600px;
   width: 100%;
-  background-color: aquamarine;
+  background-color: rgb(61, 84, 76);
 }
 .login-content {
-  height: 90%;
-  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
   max-width: 1440px;
-  box-shadow: 5px 5px 5px gray;
-  background-color: #fff;
+}
+
+.login-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.outer-green-box {
+  height: 100%;
+  width: 40%;
+  background-color: rgb(26, 235, 182);
+}
+.outer-white-box {
+  height: 100%;
+  width: 60%;
+  background-color: rgb(255, 255, 255);
+}
+.login-box-container {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgb(255, 255, 255);
+  top: 10%;
+  left: 10%;
+  height: 80%;
+  width: 80%;
+  box-shadow: 0px 10px 20px 6px #757474;
+}
+.inner-green-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgb(26, 235, 182);
+  width: 37.6%;
+  height: 100%;
+}
+.inner-green-box-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 300px;
+  height: 300px;
+}
+.inner-white-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 62%;
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+}
+.inner-white-box-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 300px;
+  height: 300px;
+  box-shadow: 0px 3px 8px 1px #757474;
+  border-radius: 6px;
+}
+.inputbutton {
+  height: 46px;
+  width: 190px;
+  background-color: rgb(26, 235, 182);
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
 }
 .footer-container {
   width: 100%;
