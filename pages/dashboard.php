@@ -25,7 +25,8 @@ if (!isset($_COOKIE['user_id'])) {
             <div class="dashboard">
                 <div class="sidepanel1">
                     <div class="add-task">
-                        <form action="../includes/create_task.php" method="post">
+                        <!-- action="../includes/create_task.php" method="post" -->
+                        <form id="myForm">
                             <label for="task-name">Task Name:</label>
                             <input type="text" id="task-name" name="title" required>
                             <label for="task-desc">Task Description:</label>
@@ -41,7 +42,10 @@ if (!isset($_COOKIE['user_id'])) {
                 <div class="panel">
                     <div class="top-panel">top-panel</div>
                     <div class="tasks">
-                        <div class="task-panel">task-panel1</div>
+                        <div class="task-panel" id="task-panel">
+                            <h1 id="task-panel-name">To Do</h1>
+                            <div class="task-container">placeholder</div>
+                        </div>
                         <div class="task-panel">task-panel2</div>
                         <div class="task-panel">task-panel3</div>
                         <div class="task-panel">task-panel4</div>
@@ -56,11 +60,38 @@ if (!isset($_COOKIE['user_id'])) {
         <?php include "../templates/footer.php" ?>
     </div>
     <script>
-        let x = document.getElementById("submit");
-        x.addEventListener("click", function () {
-            // Code to run when the button is clicked
-            alert("Button clicked!");
+        // Get a reference to the form element by its ID
+        var form = document.getElementById("myForm");
+
+        // Add a submit event listener to the form
+        form.addEventListener("submit", function (event) {
+            // Prevent the default form submission
+            event.preventDefault();
+
+            // You can perform other actions here, such as form validation or making an AJAX request
+            // For this example, we'll just log the form data
+            var formData = new FormData(form);
+            for (var pair of formData.entries()) {
+                console.log(pair[0] + ": " + pair[1]);
+            }
         });
+        let x = document.getElementById("submit");
+        let y = document.getElementById("task-panel");
+        console.log(x, "     sadas   ", y)
+
+        x.addEventListener("click", function () {
+            // Create a new div element
+            var newDiv = document.createElement("div");
+
+            // Set content or attributes for the new div
+            newDiv.textContent = "This is a dynamically created div.";
+            newDiv.className = "dynamic-div"; // You can add CSS classes
+
+            // Append the new div to the container
+            y.appendChild(newDiv);
+            console.log("23333");
+        });
+
     </script>
 </body>
 
