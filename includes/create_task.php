@@ -9,7 +9,7 @@ $description = $_POST['description'];
 $timeEstimate = $_POST['timeEstimate'];
 $assignedTo = $_POST['assignedTo'];
 
-$assignedToId = getUser($assignedTo, $conn)["id"];
+$assignedToId = getUserData($assignedTo, $conn)["id"];
 $assignedById = $_SESSION['user_id'];
 $stage = 0; 
 
