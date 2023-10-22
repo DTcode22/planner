@@ -8,6 +8,7 @@ body {
 a {
   text-decoration: none;
   cursor: pointer;
+  color: blanchedalmond;
 }
 
 button {
@@ -86,7 +87,7 @@ form {
   left: 10%;
   height: 80%;
   width: 80%;
-  box-shadow: 0px 10px 20px 6px #757474;
+  box-shadow: -2px 5px 7px 1px #757474;
 }
 .inner-green-box {
   display: flex;

@@ -38,7 +38,7 @@
                                     </g>
                                 </svg></div>
                             <h1>Planner App</h1>
-                            <h3>Our app is so good yo look its amazing man its crazy stuff</h3>
+                            <h3>Our app1 is so good yo look its amazing man its crazy stuff</h3>
                         </div>
                     </div>
                     <div class="inner-white-box">
@@ -52,7 +52,7 @@
                                     <label for="password">Password:</label>
                                     <input type="password" id="password" name="password" placeholder="password"
                                         required /><br />
-                                    <input type="submit" value="Register" class="inputbutton" />
+                                    <input type="submit" value="Log in" class="inputbutton" />
                                 </form>
                             </div>
                         </div>
