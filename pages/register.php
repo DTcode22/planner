@@ -11,7 +11,7 @@
 <body>
 
   <?php
-  include "../templates/navbar.php";
+  include "./templates/navbar.php";
   ?>
   <h2>User Registration</h2>
   <form action="./includes/process_registration.php" method="POST">
@@ -24,7 +24,7 @@
     <input type="submit" value="Register" />
   </form>
 
-  <?php include "../templates/footer.php" ?>
+  <?php include "./templates/footer.php" ?>
 </body>
 
 </html>

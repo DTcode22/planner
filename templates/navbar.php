@@ -1,10 +1,10 @@
 <div class="navbar-content">
-    <div class="slikalogo">123123123</div>
+    <div class="slikalogo">Plannerapp</div>
 
     <div class="links">
-        <div class="link">link1</div>
-        <div class="link">link2</div>
-        <div class="link">link3</div>
+        <a href="./">homepage</a>
+        <a href="./pages/dashboard.php">dashboard</a>
+        <a href="./pages/register.php">register</a>
     </div>
 </div>
 <style>
@@ -23,5 +23,11 @@
         display: flex;
         width: 300px;
         justify-content: space-around;
+    }
+
+    a {
+        text-decoration: none;
+        cursor: pointer;
+        color: blanchedalmond;
     }
 </style>
