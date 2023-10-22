@@ -1,7 +1,8 @@
 <?php
-include "database.php"
+include "database.php";
 
-class Task {
+class Task
+{
     public $id;
     public $title;
     public $description;
@@ -10,7 +11,8 @@ class Task {
     public $assignedBy;
     public $stage;
 
-    public function __construct($title, $description, $timeEstimate, $assignedTo, $assignedBy, $stage) {
+    public function __construct($title, $description, $timeEstimate, $assignedTo, $assignedBy, $stage)
+    {
         $this->title = $title;
         $this->description = $description;
         $this->timeEstimate = $timeEstimate;
@@ -19,24 +21,25 @@ class Task {
         $this->stage = $stage;
     }
 
-    public static function createFromId($id) {
+    public static function createFromId($id)
+    {
         // Example:
         // task = Task()::createFromId()
-        
-        $taskData = getTaskData($id);
-        $assignedTo = getUserDataById($taskData['assignedTo'])
-        $assignedBy = getUserDataById($taskData['assignedBy'])
 
-        $task = new self(
-            $taskData['title'],
-            $taskData['description'],
-            $taskData['timeEstimate'],
-            $assignedTo,
-            $assignedBy,
-            $taskData['stage']
-        );
+        // $taskData = getTaskData($id);
+        // $assignedTo = getUserDataById($taskData['assignedTo']);
+        // $assignedBy = getUserDataById($taskData['assignedBy']);
 
-        return $task;
+        // $task = new self(
+        //     $taskData['title'],
+        //     $taskData['description'],
+        //     $taskData['timeEstimate'],
+        //     $assignedTo,
+        //     $assignedBy,
+        //     $taskData['stage']
+        // );
+
+        // return $task;
     }
 }
 ?>
