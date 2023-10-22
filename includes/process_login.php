@@ -13,10 +13,8 @@ $user = getUserData($username, $conn);
 $hashed_password = $user['password'];
 
 if (password_verify($password, $hashed_password)) {
-    session_start();
-
-    $_SESSION['username'] = $username;
-    $_SESSION['user_id'] = $user['id'];
+    setcookie('username', $username, time() + (86400 * 30), "/"); // Set cookie for 30 days
+    setcookie('user_id', $user['id'], time() + (86400 * 30), "/"); // Set cookie for 30 days
 
     header('Location: ../pages/dashboard.php');
     exit();

@@ -1,3 +1,10 @@
+<?php
+// Check if logged in
+if (isset($_COOKIE['user_id'])) {
+    header("Location: /planner/pages/dashboard.php");
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 

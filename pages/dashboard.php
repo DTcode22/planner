@@ -1,3 +1,10 @@
+<?php
+// Check if logged in
+if (!isset($_COOKIE['user_id'])) {
+    header("Location: /planner/index.php");
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
