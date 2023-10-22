@@ -45,7 +45,7 @@
                         <div class="inner-white-box-container">
                             <h1>Log in</h1>
                             <div class="user-container">
-                                <form action="includes/process_login.php" method = "POST">
+                                <form action="includes/process_login.php" method="POST">
                                     <label for="username">Username:</label>
                                     <input type="text" placeholder="username" id="username" name="username"
                                         required></input>

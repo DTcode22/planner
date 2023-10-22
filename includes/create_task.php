@@ -11,7 +11,7 @@ $assignedTo = $_POST['assignedTo'];
 
 $assignedToId = getUserData($assignedTo, $conn)["id"];
 $assignedById = $_SESSION['user_id'];
-$stage = 0; 
+$stage = 0;
 
 $sql = "INSERT INTO tasks (title, description, time_estimate, assignedTo, assignedBy, stage) VALUES ('$title', '$description', '$timeEstimate', '$assignedToId', '$assignedById', '$stage')";
 
