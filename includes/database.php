@@ -34,7 +34,7 @@ function getUserDataById($id, $conn) {
     return $result->fetch_assoc();
 }
 
-function getTaskData($id) {
+function getTaskData($id, $conn) {
     $query = "SELECT * FROM tasks WHERE id = '$id'";
     $result = $conn->query($query);
 
@@ -45,7 +45,7 @@ function getTaskData($id) {
     return $result->fetch_assoc();
 }
 
-function getAllTasks() {
+function getAllTasks($conn) {
     $query = "SELECT * FROM tasks";
     $result = $conn->query($query);
 
