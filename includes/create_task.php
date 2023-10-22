@@ -1,6 +1,5 @@
 <?php
 require "database.php";
-require "task.php";
 
 $conn = getDBConnection();
 
@@ -10,7 +9,12 @@ $timeEstimate = $_POST['timeEstimate'];
 $assignedTo = $_POST['assignedTo'];
 
 $assignedToId = getUserData($assignedTo, $conn)["id"];
-$assignedById = $_SESSION['user_id'];
+$assignedById = $_COOKIE['user_id'];
+
+if (isset($assignedById)) {
+    echo "<script>alert('Not logged in');</script>";
+    header("Location: ../index.php");
+}
 $stage = 0;
 
 $sql = "INSERT INTO tasks (title, description, time_estimate, assignedTo, assignedBy, stage) VALUES ('$title', '$description', '$timeEstimate', '$assignedToId', '$assignedById', '$stage')";
