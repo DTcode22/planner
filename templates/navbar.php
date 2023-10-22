@@ -1,10 +1,10 @@
 <div class="navbar-content">
-    <div class="slikalogo">Plannerapp</div>
+    <div class="slikalogo">Planner app</div>
 
     <div class="links">
-        <a href="./">homepage</a>
-        <a href="./pages/dashboard.php">dashboard</a>
-        <a href="./pages/register.php">register</a>
+        <a href="/planner/index.php">homepage</a>
+        <a href="/planner/pages/dashboard.php">dashboard</a>
+        <a href="/planner/pages/register.php">register</a>
     </div>
 </div>
 <style>
