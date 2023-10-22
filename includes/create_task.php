@@ -1,6 +1,5 @@
 <?php
 require "database.php";
-require "task.php";
 
 $conn = getDBConnection();
 
