@@ -1,32 +1,27 @@
 <?php
-
 require "database.php";
+
+$conn = getDBConnection();
 
 $username = $_POST['username'];
 $password = $_POST['password'];
 
-$conn = getDBConnection();
-
 $query = "SELECT * FROM users WHERE username = '$username'";
 $result = $conn->query($query);
 
-if ($result->num_rows == 1) {
-    $user = $result->fetch_assoc();
-    $hashed_password = $user['password'];
+$user = getUser($username, $conn);
+$hashed_password = $user['password'];
 
-    if (password_verify($password, $hashed_password)) {
-        session_start();
+if (password_verify($password, $hashed_password)) {
+    session_start();
 
-        $_SESSION['username'] = $username;
-        $_SESSION['user_id'] = $user['id'];
+    $_SESSION['username'] = $username;
+    $_SESSION['user_id'] = $user['id'];
 
-        header('Location: placeholder.php');
-        exit();
-    } else {
-        echo "Invalid password";
-    }
+    header('Location: ../pages/dashboard.php');
+    exit();
 } else {
-    echo "User not found";
+    echo "Invalid password";
 }
 
 $conn->close();
