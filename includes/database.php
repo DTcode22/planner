@@ -12,7 +12,7 @@ function getDBConnection() {
     return $conn;
 }
 
-function getUser($username, $conn) {
+function getUserData($username, $conn) {
     $query = "SELECT * FROM users WHERE username = '$username'";
     $result = $conn->query($query);
 
@@ -21,5 +21,44 @@ function getUser($username, $conn) {
     }
 
     return $result->fetch_assoc();
+}
+
+function getUserDataById($id, $conn) {
+    $query = "SELECT * FROM users WHERE id = '$id'";
+    $result = $conn->query($query);
+
+    if ($result->num_rows == 0) {
+        echo "User not found";
+    }
+
+    return $result->fetch_assoc();
+}
+
+function getTaskData($id) {
+    $query = "SELECT * FROM tasks WHERE id = '$id'";
+    $result = $conn->query($query);
+
+    if ($result->num_rows == 0) {
+        echo "Task not found";
+    }
+
+    return $result->fetch_assoc();
+}
+
+function getAllTasks() {
+    $query = "SELECT * FROM tasks";
+    $result = $conn->query($query);
+
+    if ($result->num_rows == 0) {
+        echo "No tasks found";
+    }
+
+    $tasks = array();
+
+    while ($row = $result->fetch_assoc()) {
+        $tasks[] = $row;
+    }
+
+    return json_encode($tasks);
 }
 ?>

@@ -9,7 +9,7 @@ $password = $_POST['password'];
 $query = "SELECT * FROM users WHERE username = '$username'";
 $result = $conn->query($query);
 
-$user = getUser($username, $conn);
+$user = getUserData($username, $conn);
 $hashed_password = $user['password'];
 
 if (password_verify($password, $hashed_password)) {
