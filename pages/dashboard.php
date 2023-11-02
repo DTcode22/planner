@@ -35,7 +35,7 @@ if (!isset($_COOKIE['user_id'])) {
                             <input type="text" name="timeEstimate" id="task-estimate" required>
                             <label for="task-assign">Assign User:</label>
                             <input type="text" name="assignedTo" id="task-assign" required>
-                            <button type="submit" id="submit">Add task</button>
+                            <button type="submit" id="submit-button">Add task</button>
                         </form>
                     </div>
                 </div>
@@ -44,7 +44,7 @@ if (!isset($_COOKIE['user_id'])) {
                     <div class="tasks">
                         <div class="task-panel" id="task-panel">
                             <h1 id="task-panel-name">To Do</h1>
-                            <div class="task-container">placeholder</div>
+                            <div id="task-container">placeholder</div>
                         </div>
                         <div class="task-panel">task-panel2</div>
                         <div class="task-panel">task-panel3</div>
@@ -52,6 +52,7 @@ if (!isset($_COOKIE['user_id'])) {
                     </div>
                 </div>
                 <div class="sidepanel2">sidepanel2</div>
+
             </div>
         </div>
     </div>
@@ -59,39 +60,32 @@ if (!isset($_COOKIE['user_id'])) {
     <div class="footer-container">
         <?php include "../templates/footer.php" ?>
     </div>
-    <script>
-        // Get a reference to the form element by its ID
-        var form = document.getElementById("myForm");
 
-        // Add a submit event listener to the form
-        form.addEventListener("submit", function (event) {
-            // Prevent the default form submission
+    <script>
+        const form = document.getElementById('myForm');
+        const formData = new FormData(form);
+        const taskContainer = document.getElementById("task-container");
+        function createTask(event) {
             event.preventDefault();
 
-            // You can perform other actions here, such as form validation or making an AJAX request
-            // For this example, we'll just log the form data
-            var formData = new FormData(form);
-            for (var pair of formData.entries()) {
-                console.log(pair[0] + ": " + pair[1]);
-            }
-        });
-        let x = document.getElementById("submit");
-        let y = document.getElementById("task-panel");
-        console.log(x, "     sadas   ", y)
-
-        x.addEventListener("click", function () {
-            // Create a new div element
-            var newDiv = document.createElement("div");
-
-            // Set content or attributes for the new div
-            newDiv.textContent = "This is a dynamically created div.";
-            newDiv.className = "dynamic-div"; // You can add CSS classes
-
-            // Append the new div to the container
-            y.appendChild(newDiv);
-            console.log("23333");
-        });
-
+            //php call to insert_task.php
+            fetch('../includes/insert_task.php', {
+                method: 'POST',
+                body: formData,
+            })
+                .then(response => response.text())
+                .then(data => {
+                    // Handle the response from the PHP file (e.g., a success message)
+                    taskContainer.textContent = `Task added successfully!`;
+                    console.log(data + "datagoeshere");
+                })
+                .catch(error => {
+                    // Handle any errors that occur during the request
+                    taskContainer.textContent = `Error: Task not added`;
+                    console.error(error);
+                });
+        }
+        form.addEventListener("submit", createTask);
     </script>
 </body>
 
