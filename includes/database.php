@@ -17,7 +17,10 @@ function getUserData($username, $conn) {
     $result = $conn->query($query);
 
     if ($result->num_rows == 0) {
-        echo "User not found";
+        $errorResponse = array('error' => 'No user found');
+        http_response_code(400);
+        echo json_encode($errorResponse);
+        exit;
     }
 
     return $result->fetch_assoc();
@@ -28,7 +31,10 @@ function getUserDataById($id, $conn) {
     $result = $conn->query($query);
 
     if ($result->num_rows == 0) {
-        echo "User not found";
+        $errorResponse = array('error' => 'No user found');
+        http_response_code(400);
+        echo json_encode($errorResponse);
+        exit;
     }
 
     return $result->fetch_assoc();
@@ -39,7 +45,10 @@ function getTaskData($id, $conn) {
     $result = $conn->query($query);
 
     if ($result->num_rows == 0) {
-        echo "Task not found";
+        $errorResponse = array('error' => 'No task found');
+        http_response_code(400);
+        echo json_encode($errorResponse);
+        exit;
     }
 
     return $result->fetch_assoc();
@@ -50,7 +59,10 @@ function getAllTasks($conn) {
     $result = $conn->query($query);
 
     if ($result->num_rows == 0) {
-        echo "No tasks found";
+        $errorResponse = array('error' => 'No tasks found');
+        http_response_code(400);
+        echo json_encode($errorResponse);
+        exit;
     }
 
     $tasks = array();
@@ -60,5 +72,15 @@ function getAllTasks($conn) {
     }
 
     return json_encode($tasks);
+}
+
+function setStage($taskId, $stage, $conn) {
+    $query = "UPDATE tasks SET stage = '$stage' WHERE id = '$taskId'";
+    if ($conn->query($query) ==! True) {
+        $errorResponse = array('error' => 'Failed to change stage');
+        http_response_code(400);
+        echo json_encode($errorResponse);
+        exit;
+    }
 }
 ?>
