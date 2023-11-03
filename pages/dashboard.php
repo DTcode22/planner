@@ -63,11 +63,11 @@ if (!isset($_COOKIE['user_id'])) {
 
     <script>
         const form = document.getElementById('myForm');
-        const formData = new FormData(form);
         const taskContainer = document.getElementById("task-container");
         function createTask(event) {
             event.preventDefault();
-
+            const formData = new FormData(form);
+            
             //php call to insert_task.php
             fetch('../includes/insert_task.php', {
                 method: 'POST',
