@@ -20,58 +20,63 @@
   <!-- full-vw-container -->
   <div class="full-vw">
 
-    <!-- navbar-container -->
-    <div class="navbar-container">
-      <?php include "../templates/navbar.php" ?>
+    <div class="navbar-content">
+      <div class="nav">
+        <div class="slikalogo"></div>
+        <div class="links">
+          <a href="/planner">Homepage</a>
+          <a href="../pages/dashboard.php">Dashboard</a>
+          <a href="../pages/register.php">Register</a>
+        </div>
+      </div>
     </div>
 
-    <div class="login-container">
-      <div class="login-content">
-        <div class="outer-green-box"></div>
-        <div class="outer-white-box"></div>
-        <div class="login-box-container">
-          <div class="inner-green-box">
-            <div class="inner-green-box-content">
-              <div class="svg-container"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48"
-                  viewBox="0 0 48 48">
-                  <g fill="none" stroke-width="4">
-                    <path fill="#2F88FF" stroke="#000" stroke-linejoin="round"
-                      d="M5 19H43V41C43 42.1046 42.1046 43 41 43H7C5.89543 43 5 42.1046 5 41V19Z" />
-                    <path stroke="#000" stroke-linejoin="round"
-                      d="M5 10C5 8.89543 5.89543 8 7 8H41C42.1046 8 43 8.89543 43 10V19H5V10Z" />
-                    <path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" d="M16 31L22 37L34 25" />
-                    <path stroke="#000" stroke-linecap="round" d="M16 5V13" />
-                    <path stroke="#000" stroke-linecap="round" d="M32 5V13" />
-                  </g>
-                </svg></div>
-              <h1>Planner App</h1>
-              <h3>Our app1 is so good yo look its amazing man its crazy stuff</h3>
-            </div>
+    <div class="login-content">
+      <div class="outer-green-box"></div>
+      <div class="outer-white-box"></div>
+      <div class="login-box-container">
+        <div class="inner-green-box">
+          <div class="inner-green-box-content">
+            <div class="svg-container"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48"
+                viewBox="0 0 48 48">
+                <g fill="none" stroke-width="4">
+                  <path fill="#2F88FF" stroke="#000" stroke-linejoin="round"
+                    d="M5 19H43V41C43 42.1046 42.1046 43 41 43H7C5.89543 43 5 42.1046 5 41V19Z" />
+                  <path stroke="#000" stroke-linejoin="round"
+                    d="M5 10C5 8.89543 5.89543 8 7 8H41C42.1046 8 43 8.89543 43 10V19H5V10Z" />
+                  <path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" d="M16 31L22 37L34 25" />
+                  <path stroke="#000" stroke-linecap="round" d="M16 5V13" />
+                  <path stroke="#000" stroke-linecap="round" d="M32 5V13" />
+                </g>
+              </svg></div>
+            <h1>Planner App</h1>
+            <h3>Our app1 is so good yo look its amazing man its crazy stuff</h3>
           </div>
-          <div class="inner-white-box">
-            <div class="inner-white-box-container">
-              <h1>Register</h1>
-              <div class="user-container">
-                <form action="includes/process_login.php" method="POST">
-                  <label for="username">Username:</label>
-                  <input type="text" placeholder="username" id="username" name="username" required></input>
-                  <label for="password">Password:</label>
-                  <input type="password" id="password" name="password" placeholder="password" required /><br />
-                  <input type="submit" value="Register" class="inputbutton" />
-                </form>
-              </div>
+        </div>
+        <div class="inner-white-box">
+          <div class="inner-white-box-container">
+            <h1>Register</h1>
+            <div class="user-container">
+              <form action="includes/process_login.php" method="POST">
+                <label for="username">Username:</label>
+                <input type="text" placeholder="username" id="username" name="username" required></input>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="password" required /><br />
+                <input type="submit" value="Log in" class="inputbutton" />
+              </form>
             </div>
           </div>
         </div>
       </div>
+    </div>
 
-    </div>
-    <div class="footer-container">
-      <?php include "../templates/footer.php" ?>
-    </div>
+
+
+    <?php include "../templates/footer.php" ?>
+
   </div>
 
-  <script src="assets/js/script.js"></script>
+
 </body>
 
 </html>

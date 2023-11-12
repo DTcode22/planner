@@ -8,7 +8,7 @@ body {
 a {
   text-decoration: none;
   cursor: pointer;
-  color: blanchedalmond;
+  color: azure;
 }
 
 button {
@@ -27,35 +27,10 @@ form {
 }
 .full-vw {
   width: 100vw;
+  height: 100vh;
   display: flex;
   align-items: center;
   flex-direction: column;
-}
-
-.navbar-container {
-  height: 60px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #f2f2f2;
-}
-
-.login-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 600px;
-  width: 100%;
-  background-color: rgb(61, 84, 76);
-}
-.login-content {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  width: 100%;
-  max-width: 1440px;
 }
 
 .login-content {
@@ -63,7 +38,7 @@ form {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%;
+  height: 78vh;
   width: 100%;
 }
 
@@ -95,7 +70,7 @@ form {
   justify-content: center;
   flex-direction: column;
   background-color: rgb(26, 235, 182);
-  width: 37.6%;
+  width: 37.5%;
   height: 100%;
 }
 .inner-green-box-content {
@@ -133,10 +108,44 @@ form {
   border-radius: 10px;
   cursor: pointer;
 }
-.footer-container {
+
+/* navbar */
+.navbar-content {
   width: 100%;
-  height: 300px;
+  height: 8vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: rgb(50, 50, 50);
+  color: aliceblue;
+}
+
+.links {
+  display: flex;
+  width: 280px;
+  justify-content: space-between;
+  padding-right: 50px;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: azure;
+}
+a:hover {
+  color: rgba(240, 255, 255, 0.722);
+}
+
+.slikalogo {
+  width: 110px;
+  height: 90%;
+  background-image: url("../images/plannerLogo.PNG");
+  background-size: cover;
+}
+.nav {
+  height: 100%;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }

@@ -1,7 +1,8 @@
 <?php
 require "database_info.php";
 
-function getDBConnection() {
+function getDBConnection()
+{
     global $db_host, $db_username, $db_password, $db_name;
 
     $conn = new mysqli($db_host, $db_username, $db_password, $db_name);
@@ -12,7 +13,8 @@ function getDBConnection() {
     return $conn;
 }
 
-function getUserData($username, $conn) {
+function getUserData($username, $conn)
+{
     $query = "SELECT * FROM users WHERE username = '$username'";
     $result = $conn->query($query);
 
@@ -26,7 +28,8 @@ function getUserData($username, $conn) {
     return $result->fetch_assoc();
 }
 
-function getUserDataById($id, $conn) {
+function getUserDataById($id, $conn)
+{
     $query = "SELECT * FROM users WHERE id = '$id'";
     $result = $conn->query($query);
 
@@ -40,7 +43,8 @@ function getUserDataById($id, $conn) {
     return $result->fetch_assoc();
 }
 
-function getTaskData($id, $conn) {
+function getTaskData($id, $conn)
+{
     $query = "SELECT * FROM tasks WHERE id = '$id'";
     $result = $conn->query($query);
 
@@ -54,7 +58,8 @@ function getTaskData($id, $conn) {
     return $result->fetch_assoc();
 }
 
-function getAllTasks($conn) {
+function getAllTasks($conn)
+{
     $query = "SELECT * FROM tasks";
     $result = $conn->query($query);
 
@@ -71,12 +76,14 @@ function getAllTasks($conn) {
         $tasks[] = $row;
     }
 
-    return json_encode($tasks);
+    // return json_encode($tasks);
+    return json_encode(array("tasks" => $tasks));
 }
 
-function setStage($taskId, $stage, $conn) {
+function setStage($taskId, $stage, $conn)
+{
     $query = "UPDATE tasks SET stage = '$stage' WHERE id = '$taskId'";
-    if ($conn->query($query) ==! True) {
+    if ($conn->query($query) == !True) {
         $errorResponse = array('error' => 'Failed to change stage');
         http_response_code(400);
         echo json_encode($errorResponse);
